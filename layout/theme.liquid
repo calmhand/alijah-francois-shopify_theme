@@ -99,6 +99,15 @@
         background-color: rgb(var(--color-background));
       }
 
+      @font-face {
+          font-family: 'Rufina';
+          src: url('Rufina-Regular.woff2') format('woff2'),
+              url('Rufina-Regular.woff') format('woff');
+          font-weight: normal;
+          font-style: normal;
+          font-display: swap;
+      }
+
       :root {
         --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
         --font-body-style: {{ settings.type_body_font.style }};
