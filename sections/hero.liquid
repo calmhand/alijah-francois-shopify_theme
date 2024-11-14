@@ -1,0 +1,139 @@
+<div id="hero-menu">
+  <h1 id="hero-header">{{ section.settings.text }}</h1>
+  {% for block in section.blocks %}
+    {% if block.type == 'menu' %}
+      <a class="hero-link" href="{{ block.settings.url }}">{{ block.settings.text }}</a>
+    {% endif %}
+  {% endfor %}
+</div>
+
+{% comment %}
+  <img
+    id="hero-img"
+    src="{{ section.settings.hero-image | image_url }}"
+    alt="{{section.settings.alt}}"
+  >
+{% endcomment %}
+
+{% stylesheet %}
+  .hero-section {
+    padding: 2rem;
+    color: #fef6f6;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    height: 100vh;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .hero-section {
+      flex-direction: column-reverse;
+      height: 50vh;
+    }
+
+    #hero-header {
+      font-size: 1rem;
+    }
+
+    #hero-img {
+    }
+  }
+
+  #hero-menu {
+    flex: 50%;
+    border-radius: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    height: 100%;
+  }
+
+  #hero-img {
+    flex: 50%;
+    text-align: center;
+    height: 100%;
+    border-radius: 2rem;
+  }
+
+  #hero-header {
+    color: #fef6f6;
+    font-size: 3rem;
+    grid-column: span 2 / span 2;
+    padding: 4rem;
+    border-radius: 2rem;
+    background-color: #815151;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-link {
+    all: unset;
+    text-decoration: none;
+    background-color: rgba(5, 4, 4, 0.9);
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  .hero-link:hover {
+    opacity: 0.9;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Hero Section",
+  "class": "hero-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Header Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero-image",
+      "label": "Hero Image"
+    },
+    {
+      "type": "text",
+      "id": "alt",
+      "label": "Alt Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Section"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Menu Link",
+      "type": "menu",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Button URL"
+        }
+      ],
+      "limit": 2
+    }
+  ],
+  "tag": "section",
+  "limit": 1
+}
+{% endschema %}
