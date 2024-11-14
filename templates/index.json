@@ -23,8 +23,8 @@
         "menu_bhYdCa"
       ],
       "settings": {
-        "text": "Versatile Natural Hairstylist & Cosmetology Specialist based in Lawrenceville, Georgia",
-        "hero-image": "shopify:\/\/shop_images\/women.png",
+        "text": "Versatile Natural Hairstylist & Cosmetology Specialist",
+        "hero-image": "shopify:\/\/shop_images\/women2.png",
         "alt": "Women with braided hairstyles."
       }
     },
@@ -37,7 +37,7 @@
         "show_description": false,
         "description_style": "body",
         "collection": "all",
-        "products_to_show": 8,
+        "products_to_show": 4,
         "columns_desktop": 4,
         "full_width": false,
         "show_view_all": false,
