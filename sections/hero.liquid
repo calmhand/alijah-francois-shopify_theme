@@ -11,16 +11,10 @@
   <img
     src="{{ section.settings.hero-image | image_url }}"
     alt="{{section.settings.alt}}"
+    height=""
+    width=""
   >
 </div>
-
-{% comment %}
-  <img
-    id="hero-img"
-    src="{{ section.settings.hero-image | image_url }}"
-    alt="{{section.settings.alt}}"
-  >
-{% endcomment %}
 
 {% stylesheet %}
   .hero-section {
@@ -29,8 +23,6 @@
     display: flex;
     flex-wrap: wrap-reverse;
     gap: 1rem;
-    /* align-items: center; */
-    /* min-height: 80vh; */
   }
 
   #hero-menu {

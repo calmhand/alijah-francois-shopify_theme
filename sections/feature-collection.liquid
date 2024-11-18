@@ -1,0 +1,116 @@
+<div id="home-collection-divider">
+  <h2>FEATURED</h2>
+  <hr>
+</div>
+<div class="product-container">
+  <div class="single-product">
+    <div class="product-img-container"><img height="" width=""></div>
+    <div id="product-info">
+      <div>
+        <a> CUSTOM WAVE BUNDLES </a>
+        <p class="product-desc">Lorem ipsum & sorem tilou</p>
+      </div>
+      <span>$19.99</span>
+    </div>
+    <button id="checkout-btn">ADD TO CART</button>
+  </div>
+</div>
+
+<div id="shop-all-btn-container">
+  <a>BROWSE CATALOG</a>
+</div>
+
+<style>
+  #home-collection-divider {
+    padding: 2rem;
+  }
+
+  #home-collection-divider > h2 {
+    margin: 0;
+  }
+
+  #home-collection-divider > hr {
+    height: 0.2rem;
+    background-color: #050404;
+    margin: 0;
+  }
+
+  .product-container {
+    color: #fef6f6;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4rem;
+  }
+
+  .product-img-container {
+    background-color: green;
+    border-radius: 25px 25px 0px 0px;
+    height: 350px;
+    width: 100%;
+  }
+
+  #product-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+    color: #050404;
+  }
+
+  #product-info > p {
+    margin: 0;
+  }
+
+  .product-desc {
+    margin: 0;
+  }
+
+  #checkout-btn {
+    border: none;
+    background-color: #050404;
+    color: #fef6f6;
+    text-align: center;
+    border-radius: 0px 0px 25px 25px;
+    opacity: 0.85;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  #shop-all-btn-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  #shop-all-btn-container > a {
+    color: #fef6f6;
+    padding: 1rem;
+    background-color: #050404;
+    border-radius: 2rem;
+    opacity: 0.85;
+    width: 40%;
+  }
+</style>
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Feature Collection",
+  "class": "feature-collection",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [],
+  "presets": [
+    {
+      "name": "Feature Collection"
+    }
+  ],
+  "blocks": [],
+  "tag": "section",
+  "limit": 1
+}
+{% endschema %}
