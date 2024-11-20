@@ -1,7 +1,7 @@
 {
   "current": {
     "logo": "shopify:\/\/shop_images\/text-logo.svg",
-    "logo_width": 180,
+    "logo_width": 240,
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
@@ -95,6 +95,7 @@
     "badge_corner_radius": 40,
     "sale_badge_color_scheme": "scheme-5",
     "sold_out_badge_color_scheme": "scheme-3",
+    "brand_headline": "",
     "social_facebook_link": "",
     "social_instagram_link": "https:\/\/www.instagram.com\/jahhstyles._\/",
     "social_youtube_link": "",
@@ -154,7 +155,7 @@
         "settings": {
           "background": "#815151",
           "background_gradient": "",
-          "text": "#050404",
+          "text": "#fef6f6",
           "button": "#050404",
           "button_label": "#fef6f6",
           "secondary_button_label": "#050404",

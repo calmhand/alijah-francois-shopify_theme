@@ -1,5 +1,5 @@
 <div id="hero-menu">
-  <h1 id="hero-header">{{ section.settings.text }}</h1>
+  {% comment %} <h1 id="hero-header">{{ section.settings.text }}</h1> {% endcomment %}
   {% for block in section.blocks %}
     {% if block.type == 'menu' %}
       <a class="hero-link" href="{{ block.settings.url }}">{{ block.settings.text }}</a>
@@ -71,7 +71,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 1.1vw + 1rem, 5rem);
     transition: opacity 0.2s ease-in-out;
   }
 
@@ -122,7 +122,7 @@
           "label": "Button URL"
         }
       ],
-      "limit": 2
+      "limit": 4
     }
   ],
   "tag": "section",
