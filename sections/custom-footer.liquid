@@ -1,0 +1,107 @@
+<div id="footer-logo-container">
+  <p id="footer-logo">ALIJAH FRANCOIS</p>
+  <span>The Versatile Natural Hairstylist & Cosmetology Specialist based in Lawrenceville, Georgia</span>
+</div>
+
+<span style="grid-column: span 2 / span 2;"></span>
+
+<div id="footer-links-container">
+  <div class="footer-social">
+    <p>INSTAGRAM</p>
+    <p>@jahhstyles._</p>
+  </div>
+
+  <div class="footer-social">
+    <p>TIKTOK</p>
+    <p>@jahhstyles._</p>
+  </div>
+
+  <div id="footer-sitemap">
+    <ul
+      id="footer-sitemap-left"
+      style="justify-self: start; text-align: left; padding: 0; margin: 0; display: flex; flex-direction: column;"
+    >
+      <a>ABOUT</a>
+      <a>SERVICES</a>
+      <a>CATALOG</a>
+    </ul>
+
+    <ul
+      id="footer-sitemap-right"
+      style="justify-self: end; text-align: right; padding: 0; margin: 0; display: flex; flex-direction: column;"
+    >
+      <a>BOOK</a>
+      <a>CONTACT</a>
+      <a>POLICIES</a>
+    </ul>
+  </div>
+</div>
+
+<style>
+  .custom-footer {
+    color: #fef6f6;
+    background-color: #050404;
+    padding: 4rem;
+    border-top: solid 0.5rem #815151;
+  }
+
+  @media (min-width: 640px) {
+    .custom-footer {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    #footer-logo {
+      font-size: clamp(3rem, 2.5vw + 2.1rem, 6rem);
+    }
+
+    #footer-logo-container {
+      grid-column: span 2 / span 2;
+    }
+
+    #footer-links-container {
+      grid-column: span 2 / span 2;
+    }
+  }
+
+  #footer-logo {
+    margin: 0;
+    font-size: clamp(2.5rem, 1.1vw + 0.9rem, 6rem);
+  }
+
+  .footer-social {
+    display: flex;
+    align-items: bottom;
+    justify-content: space-between;
+    border-bottom: solid 1px #fef6f6;
+    margin: 2rem 0;
+  }
+
+  .footer-social > p {
+    margin: 0;
+  }
+
+  #footer-sitemap {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Custom Footer",
+  "class": "custom-footer",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [],
+  "presets": [
+    {
+      "name": "Custom Footer"
+    }
+  ],
+  "blocks": [],
+  "tag": "section",
+  "limit": 1
+}
+{% endschema %}
