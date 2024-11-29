@@ -1,38 +1,50 @@
 <div id="footer-logo-container">
   <p id="footer-logo">ALIJAH FRANCOIS</p>
-  <span>The Versatile Natural Hairstylist & Cosmetology Specialist based in Lawrenceville, Georgia</span>
+  <span>
+    {{ section.settings['footer-text'] }}
+  </span>
 </div>
 
 <span style="grid-column: span 2 / span 2;"></span>
 
 <div id="footer-links-container">
-  <div class="footer-social">
+  <a href="{{ section.settings.insta-link }}" target="_blank" class="footer-social">
     <p>INSTAGRAM</p>
     <p>@jahhstyles._</p>
-  </div>
+  </a>
 
-  <div class="footer-social">
+  <a href="{{ section.settings.tiktok-link }}" target="_blank" class="footer-social">
     <p>TIKTOK</p>
     <p>@jahhstyles._</p>
-  </div>
+  </a>
 
   <div id="footer-sitemap">
     <ul
       id="footer-sitemap-left"
       style="justify-self: start; text-align: left; padding: 0; margin: 0; display: flex; flex-direction: column;"
     >
-      <a>ABOUT</a>
-      <a>SERVICES</a>
-      <a>CATALOG</a>
+      <a class="footer-link" href="{{ section.settings['footer-link-1'].url }}">
+        {{- section.settings['footer-text-1'] -}}
+      </a>
+      <a class="footer-link" href="{{ section.settings['footer-link-2'].url }}">
+        {{- section.settings['footer-text-2'] -}}
+      </a>
+      <a class="footer-link" href="{{ section.settings['footer-link-3'].url }}">
+        {{- section.settings['footer-text-3'] -}}
+      </a>
     </ul>
 
     <ul
       id="footer-sitemap-right"
       style="justify-self: end; text-align: right; padding: 0; margin: 0; display: flex; flex-direction: column;"
     >
-      <a>BOOK</a>
-      <a>CONTACT</a>
-      <a>POLICIES</a>
+      <a class="footer-link" href="https://app.acuityscheduling.com/schedule/4aa7d594" target="_blank">BOOK</a>
+      <a class="footer-link" href="{{ section.settings['footer-link-4'].url }}">
+        {{- section.settings['footer-text-4'] -}}
+      </a>
+      <a class="footer-link" href="{{ section.settings['footer-link-5'].url }}">
+        {{- section.settings['footer-text-5'] -}}
+      </a>
     </ul>
   </div>
 </div>
@@ -70,6 +82,8 @@
   }
 
   .footer-social {
+    all: unset;
+    cursor: pointer;
     display: flex;
     align-items: bottom;
     justify-content: space-between;
@@ -85,6 +99,11 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .footer-link {
+    all: unset;
+    cursor: pointer;
+  }
 </style>
 
 {% schema %}
@@ -92,15 +111,101 @@
   "name": "Custom Footer",
   "class": "custom-footer",
   "disabled_on": {
-    "groups": ["header", "footer"]
+    "groups": ["header"]
   },
-  "settings": [],
+  "settings": [
+    {
+      "type": "text",
+      "id": "footer-text",
+      "label": "Footer Text"
+    },
+    {
+      "type": "text",
+      "id": "insta-link",
+      "label": "Instagram Link"
+    },
+    {
+      "type": "text",
+      "id": "tiktok-link",
+      "label": "TikTok Link"
+    },
+    {
+      "type": "page",
+      "id": "footer-link-1",
+      "label": "Footer Link 1"
+    },
+    {
+      "type": "text",
+      "id": "footer-text-1",
+      "label": "Footer Text 1"
+    },
+    {
+      "type": "page",
+      "id": "footer-link-2",
+      "label": "Footer Link 2"
+    },
+    {
+      "type": "text",
+      "id": "footer-text-2",
+      "label": "Footer Text 2"
+    },
+    {
+      "type": "page",
+      "id": "footer-link-3",
+      "label": "Footer Link 3"
+    },
+    {
+      "type": "text",
+      "id": "footer-text-3",
+      "label": "Footer Text 3"
+    },
+    {
+      "type": "page",
+      "id": "footer-link-4",
+      "label": "Footer Link 4"
+    },
+    {
+      "type": "text",
+      "id": "footer-text-4",
+      "label": "Footer Text 4"
+    },
+    {
+      "type": "page",
+      "id": "footer-link-4",
+      "label": "Footer Link 4"
+    },
+    {
+      "type": "text",
+      "id": "footer-text-4",
+      "label": "Footer Text 4"
+    }
+  ],
   "presets": [
     {
       "name": "Custom Footer"
     }
   ],
-  "blocks": [],
+  "blocks": [
+    {
+      "type": "link_list",
+      "name": "t:sections.footer.blocks.link_list.name",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "default": "t:sections.footer.blocks.link_list.settings.heading.default",
+          "label": "t:sections.footer.blocks.link_list.settings.heading.label"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "default": "footer",
+          "label": "t:sections.footer.blocks.link_list.settings.menu.label",
+          "info": "t:sections.footer.blocks.link_list.settings.menu.info"
+        }
+      ]
+    }
+  ],
   "tag": "section",
   "limit": 1
 }
