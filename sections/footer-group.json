@@ -5,15 +5,26 @@
     "custom_footer_ejcFfC": {
       "type": "custom-footer",
       "settings": {
-        "footer-text": "",
-        "insta-link": "",
-        "tiktok-link": ""
+        "footer-text": "Versatile Natural Hairstylist & Cosmetology Specialist based in Lawrenceville, Georgia",
+        "insta-link": "https:\/\/www.instagram.com\/jahhstyles._\/",
+        "tiktok-link": "https:\/\/www.tiktok.com\/@jahhstyles._?_t=8W7ep6Hdsd9&_r=1",
+        "footer-link-1": "about",
+        "footer-text-1": "ABOUT",
+        "footer-link-2": "services",
+        "footer-text-2": "SERVICES",
+        "footer-link-3": "catalog",
+        "footer-text-3": "CATALOG",
+        "footer-link-5": "contact",
+        "footer-text-5": "CONTACT",
+        "footer-link-6": "policies",
+        "footer-text-6": "POLICIES"
       }
     },
     "footer": {
       "type": "footer",
       "custom_css": [
-        ".footer {\/* text-align: left !important; *\/ padding: 0; margin: 0;}"
+        ".footer__copyright {margin: 0;}",
+        ".footer__content-bottom {padding: 0;}"
       ],
       "settings": {
         "color_scheme": "scheme-2",
@@ -25,9 +36,9 @@
         "enable_language_selector": false,
         "payment_enable": true,
         "show_policy": true,
-        "margin_top": 48,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "margin_top": 0,
+        "padding_top": 0,
+        "padding_bottom": 16
       }
     }
   },
