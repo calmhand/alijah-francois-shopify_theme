@@ -1,0 +1,91 @@
+<section id="policy-title">
+  <h1>APPOINTMENT POLICIES</h1>
+  <p>
+    {{ section.settings.text }}
+  </p>
+</section>
+<section class="policy-content" id="payment-text">
+  <h2>PAYMENT</h2>
+  <p>{{ section.settings.payment_text }}</p>
+</section>
+
+<section class="policy-content" id="deposit-text">
+  <h2>DEPOSITS</h2>
+  <p>{{ section.settings.deposit_text }}</p>
+</section>
+
+<section class="policy-content" id="etiquette-text">
+  <h2>APPOINTMENT ETIQUETTE</h2>
+  <p>{{ section.settings.appointment_text }}</p>
+</section>
+
+<section class="policy-content">
+  <h2>QUESTIONS?</h2>
+  <a href="{{ section.settings.contact_url.url }}">Contact Us</a>
+</section>
+
+<style>
+  .custom-policy {
+    background-color: #050404f0;
+    color: #fef6f6;
+    padding: 6rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .policy-content {
+  }
+
+  #policy-title > h1,
+  .policy-content > h2,
+  .policy-content > p,
+  .policy-content > a {
+    color: #fef6f6;
+    margin: 0;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Custom Policy",
+  "class": "custom-policy",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Appointment Policy Text"
+    },
+    {
+      "type": "richtext",
+      "id": "payment_text",
+      "label": "Payment Policy"
+    },
+    {
+      "type": "richtext",
+      "id": "deposit_text",
+      "label": "Deposit Policy"
+    },
+    {
+      "type": "richtext",
+      "id": "appointment_text",
+      "label": "Appointment Etiquette"
+    },
+    {
+      "type": "url",
+      "id": "contact_url",
+      "label": "Contact Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Policy"
+    }
+  ],
+  "blocks": [],
+  "tag": "section",
+  "limit": 1
+}
+{% endschema %}

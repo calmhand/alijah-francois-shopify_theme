@@ -1,0 +1,27 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "policies_VwXcde": {
+      "type": "policies",
+      "settings": {
+        "text": "",
+        "payment_text": "Cash, Zelle, Credit and Debit cards are acceptable forms of payment.",
+        "deposit_text": "A deposit of $25 will be collected upon confirmation of appointment. Deposit will not be refunded. Late for 20 mins you will be charged $25. No show will automatically cancel your appointment and be charged full price. For more information, you can contact us directly.",
+        "appointment_text": "You must cancel the appointment 48 hours in advance. Your deposit will not be refunded. Please communicate with me if you will be tardy so I can adjust my schedule if need be. If not, you will be charged an additional $25",
+        "contact_url": "shopify:\/\/pages\/contact"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "policies_VwXcde"
+  ]
+}
