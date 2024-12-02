@@ -1,5 +1,4 @@
 <div id="hero-menu">
-  {% comment %} <h1 id="hero-header">{{ section.settings.text }}</h1> {% endcomment %}
   {% for block in section.blocks %}
     {% if block.type == 'menu' %}
       <a class="hero-link" href="{{ block.settings.url }}">{{ block.settings.text }}</a>

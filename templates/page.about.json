@@ -1,0 +1,25 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "about_nyJbkX": {
+      "type": "about",
+      "settings": {
+        "text": "I am a versatile hairstylist that moved from New York a little over a year ago. I came out here alone with a plan and God! I have built some great relationships with several clients As well as other stylists in the industry along the way and I look forward to building more! My goal is for you guys to thrive internally which with reflect on the outside.",
+        "about-image": "shopify:\/\/shop_images\/Screenshot_2024-11-29_at_8.35.46_PM.png",
+        "alt": "Alijah Francois"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "about_nyJbkX"
+  ]
+}

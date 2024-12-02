@@ -1,0 +1,96 @@
+<div id="about-content">
+  <h1>ABOUT</h1>
+  <p>
+    {{ section.settings.text }}
+  </p>
+</div>
+<div id="about-img">
+  <img
+    src="{{ section.settings.about-image | image_url }}"
+    alt="{{ section.settings.alt }}"
+    height=""
+    width=""
+  >
+</div>
+
+<style>
+  .custom-about {
+    background-color: #050404f0;
+    color: #fef6f6;
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  #about-content {
+    padding: 2rem;
+    flex: 50%;
+  }
+
+  #about-content > h1,
+  #about-content > p {
+    color: #fef6f6;
+    margin: 0;
+  }
+
+  #about-img {
+    width: 100%;
+    border-radius: 2rem;
+  }
+
+  #about-img > img {
+    display: block;
+    object-fit: contain;
+    width: 100%;
+    border-radius: 2rem;
+  }
+
+  @media (min-width: 640px) {
+    .custom-about {
+      padding: 4rem;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: center;
+      justify-items: center;
+    }
+
+    #about-img > img {
+      width: 100%;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Custom About",
+  "class": "custom-about",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "About Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "about-image",
+      "label": "About Image"
+    },
+    {
+      "type": "text",
+      "id": "alt",
+      "label": "Alt Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom About"
+    }
+  ],
+  "blocks": [],
+  "tag": "section",
+  "limit": 1
+}
+{% endschema %}
