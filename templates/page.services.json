@@ -1,0 +1,41 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "services_6K6J8E": {
+      "type": "services",
+      "settings": {
+        "style_text_one": "KNOTLESS BRAIDS",
+        "gender_one": "WOMENS",
+        "style_photo_one": "shopify:\/\/shop_images\/placeholder.png",
+        "style_text_two": "VERSATILE SEW-IN",
+        "gender_two": "WOMENS",
+        "style_photo_two": "shopify:\/\/shop_images\/placeholder.png",
+        "style_text_three": "BOX BRAIDS",
+        "gender_three": "WOMENS",
+        "style_photo_three": "shopify:\/\/shop_images\/placeholder.png",
+        "style_text_four": "TWISTS",
+        "gender_four": "MENS",
+        "style_photo_four": "shopify:\/\/shop_images\/placeholder.png",
+        "style_text_five": "CORNROWS",
+        "gender_five": "MENS",
+        "style_photo_five": "shopify:\/\/shop_images\/placeholder.png",
+        "style_text_six": "STARTER LOCS",
+        "gender_six": "MENS",
+        "style_photo_six": "shopify:\/\/shop_images\/placeholder.png",
+        "extra_services_text": "<p>...<\/p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "services_6K6J8E"
+  ]
+}

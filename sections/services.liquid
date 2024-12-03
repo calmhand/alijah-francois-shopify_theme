@@ -1,0 +1,316 @@
+<section id="services-title">
+  <h1>FEATURED SERVICES</h1>
+  <hr style="padding: 1px; margin: 0; background-color: #050404;">
+  <p>
+    {{ section.settings.text }}
+  </p>
+</section>
+
+<section id="services-grid">
+  <div class="featured-service">
+    <img
+      src="{{ section.settings.style_photo_one | image_url }}"
+      alt="Hair Service"
+      height=""
+      width=""
+    >
+    <span>
+      <p>{{- section.settings.style_text_one }}</p>
+      <p>{{ section.settings.gender_one -}}</p>
+    </span>
+  </div>
+
+  <div class="featured-service">
+    <img
+      src="{{ section.settings.style_photo_two | image_url }}"
+      alt="Hair Service"
+      height=""
+      width=""
+    >
+    <span>
+      <p>{{ section.settings.style_text_two }}</p>
+      <p>{{ section.settings.gender_two }}</p>
+    </span>
+  </div>
+
+  <div class="featured-service">
+    <img
+      src="{{ section.settings.style_photo_three | image_url }}"
+      alt="Hair Service"
+      height=""
+      width=""
+    >
+    <span>
+      <p>{{ section.settings.style_text_three }}</p>
+      <p>{{ section.settings.gender_three }}</p>
+    </span>
+  </div>
+
+  <div class="featured-service">
+    <img
+      src="{{ section.settings.style_photo_four | image_url }}"
+      alt="Hair Service"
+      height=""
+      width=""
+    >
+    <span>
+      <p>{{ section.settings.style_text_four }}</p>
+      <p>{{ section.settings.gender_four }}</p>
+    </span>
+  </div>
+
+  <div class="featured-service">
+    <img
+      src="{{ section.settings.style_photo_five | image_url }}"
+      alt="Hair Service"
+      height=""
+      width=""
+    >
+    <span>
+      <p>{{ section.settings.style_text_five }}</p>
+      <p>{{ section.settings.gender_five }}</p>
+    </span>
+  </div>
+
+  <div class="featured-service">
+    <img
+      src="{{ section.settings.style_photo_six | image_url }}"
+      alt="Hair Service"
+      height=""
+      width=""
+    >
+    <span>
+      <p>{{ section.settings.style_text_six }}</p>
+      <p>{{ section.settings.gender_six }}</p>
+    </span>
+  </div>
+</section>
+
+<section id="services-title">
+  <p style="margin: 0;">MORE SERVICES</p>
+  <hr style="padding: 1px; margin: 0; background-color: #050404;">
+  <p>{{ section.settings.extra_services_text }}</p>
+</section>
+
+<style>
+  .custom-services {
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  #services-title > h1 {
+    margin: 0;
+  }
+
+  #services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .featured-service > img {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .featured-service > span {
+    font-size: clamp(1rem, 0.9vw + 0.5rem, 2rem);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .featured-service > span > p {
+    margin: 0;
+    margin-top: -1rem;
+  }
+
+  @media (min-width: 640px) {
+    #services-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Custom Services",
+  "class": "custom-services",
+  "settings": [
+    {
+      "type": "text",
+      "id": "style_text_one",
+      "label": "Style One Title"
+    },
+    {
+      "type": "radio",
+      "id": "gender_one",
+      "label": "Gender One Selection",
+      "options": [
+        {
+          "value": "WOMENS",
+          "label": "Womens"
+        },
+        {
+          "value": "MENS",
+          "label": "Mens"
+        }
+      ],
+      "default": "WOMENS"
+    },
+    {
+      "type": "image_picker",
+      "id": "style_photo_one",
+      "label": "Style Image One"
+    },
+
+    {
+      "type": "text",
+      "id": "style_text_two",
+      "label": "Style Two Title"
+    },
+    {
+      "type": "radio",
+      "id": "gender_two",
+      "label": "Gender Two Selection",
+      "options": [
+        {
+          "value": "WOMENS",
+          "label": "Womens"
+        },
+        {
+          "value": "MENS",
+          "label": "Mens"
+        }
+      ],
+      "default": "WOMENS"
+    },
+    {
+      "type": "image_picker",
+      "id": "style_photo_two",
+      "label": "Image"
+    },
+
+    {
+      "type": "text",
+      "id": "style_text_three",
+      "label": "Style Three Title"
+    },
+    {
+      "type": "radio",
+      "id": "gender_three",
+      "label": "Gender Three Selection",
+      "options": [
+        {
+          "value": "WOMENS",
+          "label": "Womens"
+        },
+        {
+          "value": "MENS",
+          "label": "Mens"
+        }
+      ],
+      "default": "WOMENS"
+    },
+    {
+      "type": "image_picker",
+      "id": "style_photo_three",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "style_text_four",
+      "label": "Style Four Title"
+    },
+    {
+      "type": "radio",
+      "id": "gender_four",
+      "label": "Gender Four Selection",
+      "options": [
+        {
+          "value": "WOMENS",
+          "label": "Womens"
+        },
+        {
+          "value": "MENS",
+          "label": "Mens"
+        }
+      ],
+      "default": "WOMENS"
+    },
+    {
+      "type": "image_picker",
+      "id": "style_photo_four",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "style_text_five",
+      "label": "Style Five Title"
+    },
+    {
+      "type": "radio",
+      "id": "gender_five",
+      "label": "Gender Five Selection",
+      "options": [
+        {
+          "value": "WOMENS",
+          "label": "Womens"
+        },
+        {
+          "value": "MENS",
+          "label": "Mens"
+        }
+      ],
+      "default": "WOMENS"
+    },
+    {
+      "type": "image_picker",
+      "id": "style_photo_five",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "style_text_six",
+      "label": "Style Six Title"
+    },
+    {
+      "type": "radio",
+      "id": "gender_six",
+      "label": "Gender Six Selection",
+      "options": [
+        {
+          "value": "WOMENS",
+          "label": "Womens"
+        },
+        {
+          "value": "MENS",
+          "label": "Mens"
+        }
+      ],
+      "default": "WOMENS"
+    },
+    {
+      "type": "image_picker",
+      "id": "style_photo_six",
+      "label": "Image"
+    },
+    {
+      "type": "richtext",
+      "id": "extra_services_text",
+      "label": "Extra Services Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Services"
+    }
+  ],
+  "blocks": [],
+  "tag": "section",
+  "limit": 1
+}
+{% endschema %}
