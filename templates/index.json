@@ -79,7 +79,10 @@
     },
     "promo_banner_mYtryG": {
       "type": "promo-banner",
-      "settings": {}
+      "settings": {
+        "promo_text": "SEE ALL AVAILABLE SERVICES",
+        "promo_url": "shopify:\/\/pages\/services"
+      }
     },
     "image_with_text_md7UJW": {
       "type": "image-with-text",

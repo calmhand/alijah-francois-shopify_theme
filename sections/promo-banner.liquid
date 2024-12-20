@@ -1,4 +1,4 @@
-<p class="promo-message">TRY THE FENUGREEK AND ROSEMARY OIL FOR LASTING GROWTH</p>
+<a href="{{ section.settings.promo_url }}" class="promo_message">{{ section.settings.promo_text }}</a>
 
 <style>
   .promo-banner {
@@ -8,10 +8,13 @@
     border-radius: 2rem;
     text-align: center;
     font-size: clamp(2rem, 1vw + 0.7rem, 5rem);
+    cursor: pointer;
   }
 
-  .promo-message {
+  .promo_message {
     margin: 0;
+    text-decoration: none;
+    color: #050404;
   }
 </style>
 
@@ -22,7 +25,18 @@
   "disabled_on": {
     "groups": ["header", "footer"]
   },
-  "settings": [],
+  "settings": [
+    {
+      "type": "text",
+      "id": "promo_text",
+      "label": "Promotional Text"
+    },
+    {
+      "type": "url",
+      "id": "promo_url",
+      "label": "Promotion Link"
+    }
+  ],
   "presets": [
     {
       "name": "Promo Banner"
