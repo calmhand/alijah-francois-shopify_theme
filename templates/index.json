@@ -48,8 +48,9 @@
       "type": "featured-collection",
       "custom_css": [
         ".price__container {line-height: 1.5rem;}",
-        ".collection__title {margin: 0;}",
-        ".title {margin: 0; border-bottom: solid #050404 2px;}"
+        ".collection__title {margin: 0 2rem; padding: 0;}",
+        ".title {margin: 0; border-bottom: solid #050404 2px;}",
+        ".slider-mobile-gutter {margin: 0 2rem;}"
       ],
       "settings": {
         "title": "<strong>FEATURED<\/strong>",
@@ -59,7 +60,7 @@
         "description_style": "body",
         "collection": "home-page-feature",
         "products_to_show": 4,
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
