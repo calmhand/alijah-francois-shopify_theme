@@ -23,7 +23,7 @@
     "footer": {
       "type": "footer",
       "custom_css": [
-        ".footer__copyright {margin: 0;}",
+        ".footer__copyright {margin: 0; color: #f7f6fb;}",
         ".footer__content-bottom {padding: 0;}"
       ],
       "settings": {
